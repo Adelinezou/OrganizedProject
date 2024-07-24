@@ -6,6 +6,34 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
+#myBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border-radius:50%;
+    color:black;
+    font-size:30px;
+    background-color: #eaa001;
+}
+#myBtn:hover{
+    color:#eaa001;
+    background-color: black;
+}
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.logo {
+    width: 225px; 
+    height: 150px; 
+    margin-right: 5px; 
+}
+
+.logo, .title{
+    margin-left: -80px;
+}
 
 .container {
     text-align: center;

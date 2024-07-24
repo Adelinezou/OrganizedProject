@@ -1,3 +1,20 @@
+let mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 const boardSize = 11;  // Define the size of the board as 11x11.
 const gameBoard = document.getElementById('game-board');  // Get the game board element from the DOM.
 const resetButton = document.getElementById('reset-button');  // Get the reset button element from the DOM.
