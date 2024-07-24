@@ -1,3 +1,4 @@
+
 body {
     justify-content: center;
     align-items: center;
@@ -6,20 +7,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
-#myBtn{
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    border-radius:50%;
-    color:black;
-    font-size:30px;
-    background-color: #eaa001;
-}
-#myBtn:hover{
-    color:#eaa001;
-    background-color: black;
-}
-.title {
+
+.titleHeading {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +20,7 @@ body {
     margin-right: 5px; 
 }
 
-.logo, .title{
+.logo, .titleHeading{
     margin-left: -80px;
 }
 
@@ -60,16 +49,6 @@ body {
     rotate: 90deg;
 }
 
-.innerHex {
-    width: 40px;
-    height: 40px;
-    background-color: #ffe11d;
-    clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
 
 .hex.blocked {
     background-color: black;
@@ -107,13 +86,13 @@ body {
     gap: 20px;
 }
 
-img {
+/* img {
     height: 100px;
     width: 100px;
 
-}
+} */
 
-.TypeOfGame {
+/* .TypeOfGame {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -127,7 +106,7 @@ img {
 
 .TypeOfGame:hover {
     background-color: rgb(142, 168, 255);
-}
+} */
 
 a {
     color: black;
@@ -137,4 +116,133 @@ a {
     background-color: black;
     padding: 10px;
     color: white
+}
+
+#flex {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 20px;
+
+    justify-content: flex-end; /* Change the height of the whole buttons */
+}
+
+.link {
+    position: relative;
+    background-color: blue;
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 24px;
+    margin: 20px;
+    animation-name: shrink;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.link:hover {
+    animation-name: grow;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes grow {
+    from {
+        width: 400px;
+        height: 200px;
+        background-color: black;
+    }
+    to {
+        width: 450px;
+        height: 250px;
+        background-color: yellow;
+    }
+}
+
+@keyframes shrink {
+    from {
+        width: 450px;
+        height: 250px;
+        background-color: yellow;
+    }
+    to {
+        width: 400px;
+        height: 200px;
+        background-color: black;
+    }
+}
+
+.link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Size of image in the button */
+    border-radius: 20px;
+}
+
+.link .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+    opacity: 0; /* Hidden to later show text */
+    transition: opacity 0.3s;
+    border-radius: 20px;
+}
+
+.link:hover .overlay {
+    opacity: 1; /* Show text on hover */
+}
+
+.title {
+    font-family: sans-serif;
+    font-size: 50px;
+    color: black;
+    animation: titleAnimation 5s infinite;
+    margin-top: 20px;
+}
+
+@keyframes titleAnimation {
+    0% {
+        color: black;
+        transform: translateY(-20px);
+        font-weight: bold;
+    }
+    50% {
+        color: black;
+        transform: translateY(-10px);
+        font-weight: bold;
+    }
+    100% {
+        color: black;
+        transform: translateY(-20px);
+        font-weight: bold;
+    }
+}
+#myBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border-radius:50%;
+    color:black;
+    font-size:30px;
+    background-color: #eaa001;
+}
+#myBtn:hover{
+    color:#eaa001;
+    background-color: black;
 }
