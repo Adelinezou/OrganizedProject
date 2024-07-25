@@ -81,8 +81,8 @@ function updateBoard() {
         if (beePosition.x === row && beePosition.y === col) {
             hex.classList.add('bee');  // Add the 'bee' class if this cell is the bee's position.
             const rect = hex.getBoundingClientRect();
-            positionX = rect.x;
-            positionY = rect.y;
+            positionX = rect.x + window.scrollX;
+            positionY = rect.y + window.scrollY;
         } else if (blockedCells.some(cell => cell.x === row && cell.y === col)) {
             hex.classList.add('blocked');  // Add the 'blocked' class if this cell is blocked.
         }
