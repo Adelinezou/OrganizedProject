@@ -1,4 +1,3 @@
-
 body {
     justify-content: center;
     align-items: center;
@@ -14,13 +13,15 @@ body {
     justify-content: center;
     margin-bottom: 20px;
 }
+
 .logo {
-    width: 225px; 
-    height: 150px; 
-    margin-right: 5px; 
+    width: 225px;
+    height: 150px;
+    margin-right: 5px;
 }
 
-.logo, .titleHeading{
+.logo,
+.titleHeading {
     margin-left: -80px;
 }
 
@@ -124,7 +125,8 @@ a {
     align-items: center;
     margin-bottom: 20px;
 
-    justify-content: flex-end; /* Change the height of the whole buttons */
+    justify-content: flex-end;
+    /* Change the height of the whole buttons */
 }
 
 .link {
@@ -159,6 +161,7 @@ a {
         height: 200px;
         background-color: black;
     }
+
     to {
         width: 450px;
         height: 250px;
@@ -172,6 +175,7 @@ a {
         height: 250px;
         background-color: yellow;
     }
+
     to {
         width: 400px;
         height: 200px;
@@ -182,7 +186,8 @@ a {
 .link img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Size of image in the button */
+    object-fit: contain;
+    /* Size of image in the button */
     border-radius: 20px;
 }
 
@@ -199,13 +204,15 @@ a {
     color: white;
     font-size: 30px;
     font-family: sans-serif;
-    opacity: 0; /* Hidden to later show text */
+    opacity: 0;
+    /* Hidden to later show text */
     transition: opacity 0.3s;
     border-radius: 20px;
 }
 
 .link:hover .overlay {
-    opacity: 1; /* Show text on hover */
+    opacity: 1;
+    /* Show text on hover */
 }
 
 .title {
@@ -222,27 +229,61 @@ a {
         transform: translateY(-20px);
         font-weight: bold;
     }
+
     50% {
         color: black;
         transform: translateY(-10px);
         font-weight: bold;
     }
+
     100% {
         color: black;
         transform: translateY(-20px);
         font-weight: bold;
     }
 }
-#myBtn{
+
+#myBtn {
     position: fixed;
     bottom: 20px;
     right: 30px;
-    border-radius:50%;
-    color:black;
-    font-size:30px;
+    border-radius: 50%;
+    color: black;
+    font-size: 30px;
     background-color: #eaa001;
 }
-#myBtn:hover{
-    color:#eaa001;
+
+#myBtn:hover {
+    color: #eaa001;
     background-color: black;
+}
+
+.nav div {
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.nav {
+    width: 30px;
+    display: block;
+    margin: 1cm 0 0 1cm;
+}
+
+.one {
+    width: 30px;
+}
+
+.two {
+    width: 20px;
+}
+
+.three {
+    width: 25px;
+}
+
+.nav:hover div {
+    width: 35px;
 }
