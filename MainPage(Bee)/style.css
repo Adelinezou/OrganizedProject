@@ -7,6 +7,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
+
 #myBtn{
     position: fixed;
     bottom: 20px;
@@ -32,9 +33,9 @@ body {
     }
 
 .logo {
-    width: 225px; 
-    height: 150px; 
-    margin-right: 5px; 
+    width: 225px;
+    height: 150px;
+    margin-right: 5px;
 }
 
 .logo, .titleHeading{
@@ -188,6 +189,7 @@ a {
         width: 390px;
         height: 190px;
         background-color: black;
+
     }
 }
 
@@ -225,6 +227,7 @@ a {
     font-size: 30px;
     font-family: sans-serif;
     opacity: 0; /* Hidden to later show text */
+
     transition: opacity 0.3s;
     border-radius: 20px;
 }
@@ -257,6 +260,7 @@ a {
         transform: translateY(-20px);
         font-weight: bold;
     }
+
     50% {
         color: black;
         transform: translateY(-10px);
@@ -267,4 +271,49 @@ a {
         transform: translateY(-20px);
         font-weight: bold;
     }
+}
+
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border-radius: 50%;
+    color: black;
+    font-size: 30px;
+    background-color: #eaa001;
+}
+
+#myBtn:hover {
+    color: #eaa001;
+    background-color: black;
+}
+
+.nav div {
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.nav {
+    width: 30px;
+    display: block;
+    margin: 1cm 0 0 1cm;
+}
+
+.one {
+    width: 30px;
+}
+
+.two {
+    width: 20px;
+}
+
+.three {
+    width: 25px;
+}
+
+.nav:hover div {
+    width: 35px;
 }
