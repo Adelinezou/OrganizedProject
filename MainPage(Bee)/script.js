@@ -1,7 +1,7 @@
 let mybutton = document.getElementById("myBtn");
 
 window.onscroll = function () { scrollFunction() };
-
+//checks the scroll position of the document.
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
@@ -9,7 +9,7 @@ function scrollFunction() {
         mybutton.style.display = "none";
     }
 }
-
+//This function scrolls the document to the top when called.
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -25,7 +25,7 @@ let blockedCells = [];  // Initialize an empty array to store the positions of b
 function randInt(max) {
     return Math.floor(Math.random() * max);  // Generate a random integer from 0 to max-1.
 }
-
+//set 14 cells to block 
 function setRandBoard() {
     blockedCells = [];  // Clear any previously blocked cells.
     const totalCells = boardSize * boardSize;  // Calculate the total number of cells on the board.
@@ -94,12 +94,6 @@ function updateBoard() {
     beeImg.style.height = '60px';
     beeImg.style.left = `${positionX}px`;
     beeImg.style.top = `${positionY - 10}px`;
-
-    // if (beePosition.x === 0 || beePosition.x === boardSize - 1 || beePosition.y === 0 || beePosition.y === boardSize - 1) {
-    //     beeImg.src = "BeeA2.png";  // Change the bee image when it reaches the border.
-    // } else {
-    //     beeImg.src = "BeeA1.png";  // Reset to the original bee image if it's not on the border.
-    // }
 
     console.log("set position:" + positionX + "," + positionY);
 }
