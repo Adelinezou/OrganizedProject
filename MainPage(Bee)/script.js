@@ -109,7 +109,7 @@ function handleHexClick(event) {
     blockedCells.push({ x: row, y: col });  // Add the clicked cell to the blocked cells.
     // updateBoard();  // Update the board.
     if (!findAvailableRoad(beePosition)) {  // Check if the bee is trapped.
-        document.getElementById("bee").src = 'BeeA3.png';
+        document.getElementById("bee").src = 'MainPage(Bee)/BeeA3.png';
         updateBoard();
         alert('You trapped the bee!');  // Alert the user if the bee is trapped.
         resetGame();  // Reset the game.
@@ -183,7 +183,7 @@ function movebee() {
         if (x === 0 || x === boardSize - 1 || y === 0 || y === boardSize - 1) {
             beePosition = path[1] || path[0];  // Move the bee to the first step of the path.
             if (beePosition.x === 0 || beePosition.x === boardSize - 1 || beePosition.y === 0 || beePosition.y === boardSize - 1) {
-                document.getElementById("bee").src = 'BeeA2.png';
+                document.getElementById("bee").src = 'MainPage(Bee)/BeeA2.png';
                 updateBoard();
                 alert('The bee escaped!');  // Alert the user if the bee escaped.
                 resetGame();  // Reset the game.
@@ -203,7 +203,7 @@ function movebee() {
             }
         }
     }
-    document.getElementById("bee").src = 'BeeA3.png';
+    document.getElementById("bee").src = 'MainPage(Bee)/BeeA3.png';
     updateBoard();
     alert('You trapped the bee!');  // Alert the user if the bee is trapped.
     resetGame();  // Reset the game.
