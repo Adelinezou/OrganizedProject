@@ -1,7 +1,7 @@
 let mybutton = document.getElementById("myBtn");
 
 window.onscroll = function () { scrollFunction() };
-
+//checks the scroll position of the document.
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
@@ -9,7 +9,7 @@ function scrollFunction() {
         mybutton.style.display = "none";
     }
 }
-
+//This function scrolls the document to the top when called.
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -25,7 +25,7 @@ let blockedCells = [];  // Initialize an empty array to store the positions of b
 function randInt(max) {
     return Math.floor(Math.random() * max);  // Generate a random integer from 0 to max-1.
 }
-
+//set 15 hex to block 
 function setRandBoard() {
     blockedCells = [];  // Clear any previously blocked cells.
     const totalCells = boardSize * boardSize;  // Calculate the total number of cells on the board.
@@ -95,12 +95,6 @@ function updateBoard() {
     beeImg.style.left = `${positionX}px`;
     beeImg.style.top = `${positionY - 10}px`;
 
-    // if (beePosition.x === 0 || beePosition.x === boardSize - 1 || beePosition.y === 0 || beePosition.y === boardSize - 1) {
-    //     beeImg.src = "BeeA2.png";  // Change the bee image when it reaches the border.
-    // } else {
-    //     beeImg.src = "BeeA1.png";  // Reset to the original bee image if it's not on the border.
-    // }
-
     console.log("set position:" + positionX + "," + positionY);
 }
 
@@ -115,7 +109,7 @@ function handleHexClick(event) {
     blockedCells.push({ x: row, y: col });  // Add the clicked cell to the blocked cells.
     // updateBoard();  // Update the board.
     if (!findAvailableRoad(beePosition)) {  // Check if the bee is trapped.
-        document.getElementById("bee").src = 'BeeA3.png';
+        document.getElementById("bee").src = 'MainPage(Bee)/BeeA3.png';
         updateBoard();
         alert('You trapped the bee!');  // Alert the user if the bee is trapped.
         resetGame();  // Reset the game.
@@ -189,7 +183,7 @@ function movebee() {
         if (x === 0 || x === boardSize - 1 || y === 0 || y === boardSize - 1) {
             beePosition = path[1] || path[0];  // Move the bee to the first step of the path.
             if (beePosition.x === 0 || beePosition.x === boardSize - 1 || beePosition.y === 0 || beePosition.y === boardSize - 1) {
-                document.getElementById("bee").src = 'BeeA2.png';
+                document.getElementById("bee").src = 'MainPage(Bee)/BeeA2.png';
                 updateBoard();
                 alert('The bee escaped!');  // Alert the user if the bee escaped.
                 resetGame();  // Reset the game.
@@ -209,7 +203,7 @@ function movebee() {
             }
         }
     }
-    document.getElementById("bee").src = 'BeeA3.png';
+    document.getElementById("bee").src = 'MainPage(Bee)/BeeA3.png';
     updateBoard();
     alert('You trapped the bee!');  // Alert the user if the bee is trapped.
     resetGame();  // Reset the game.
