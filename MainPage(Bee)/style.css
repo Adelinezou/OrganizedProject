@@ -72,7 +72,7 @@ body {
     background-color: black;
 }
 
-.hex.cat {
+.hex.bee {
     background-color: brown;
 }
 
@@ -108,28 +108,6 @@ body {
     flex-wrap: wrap;
     gap: 20px;
 }
-
-/* img {
-    height: 100px;
-    width: 100px;
-
-} */
-
-/* .TypeOfGame {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    padding: 10px;
-    background-color: rgb(254, 255, 217);
-    max-width: 600px;
-    border-radius: 5px;
-    display: block;
-}
-
-.TypeOfGame:hover {
-    background-color: rgb(142, 168, 255);
-} */
 
 a {
     color: black;

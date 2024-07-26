@@ -25,7 +25,7 @@ let blockedCells = [];  // Initialize an empty array to store the positions of b
 function randInt(max) {
     return Math.floor(Math.random() * max);  // Generate a random integer from 0 to max-1.
 }
-//set 14 cells to block 
+//set 15 hex to block 
 function setRandBoard() {
     blockedCells = [];  // Clear any previously blocked cells.
     const totalCells = boardSize * boardSize;  // Calculate the total number of cells on the board.
