@@ -1,270 +1,272 @@
-
+/* Style for the body element */
 body {
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set font */
+    background-color: #f0f0f0; /* Light gray background color */
 }
-#myBtn{
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    border-radius:50%;
-    color:black;
-    font-size:30px;
-    background-color: #eaa001;
+
+#myBtn {
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 30px; /* 30px from the right */
+    border-radius: 50%; /* Round button */
+    color: black; /* Black text color */
+    font-size: 30px; /* Large font size */
+    background-color: #eaa001; /* Orange background color */
 }
-#myBtn:hover{
-    color:#eaa001;
-    background-color: black;
+
+/* Hover effect for the "Back to Top" button */
+#myBtn:hover {
+    color: #eaa001; /* Orange text color */
+    background-color: black; /* Black background color */
 }
+
+/* Style for the title heading */
 .titleHeading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-family: sans-serif;
-    font-size: 20px;
-    animation: titleAnimation 4s infinite;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 20px; 
+    font-size: 20px; 
+    animation: titleAnimation 4s infinite; 
     margin-top: 30px; 
-    }
+}
 
+/* Style for the logo image */
 .logo {
-    width: 225px; 
-    height: 150px; 
-    margin-right: 5px; 
+    width: 225px; /* Set width */
+    height: 150px; /* Set height */
+    margin-right: 5px; /* Space to the right */
 }
 
-.logo, .titleHeading{
-    margin-left: -80px;
+/* Apply margin to both logo and title heading */
+.logo, .titleHeading {
+    margin-left: -80px; /* Negative space to the left */
 }
+
 
 .container {
-    text-align: center;
+    text-align: center; /* aligns the reset button in the cneter*/
 }
 
+/* Style for the game board */
 .game-board {
-    display: grid;
-    grid-template-columns: repeat(11, 50px);
-    gap: 2px;
-    justify-content: center;
-    margin: 20px auto;
-    position: relative;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(11, 50px); /* 11 columns of 50px each */
+    gap: 2px; /* Space between grid items */
+    justify-content: center; /* Center the grid */
+    margin: 20px auto; /* Space around the board */
+    position: relative; /* Relative positioning */
 }
 
+/* Style for hexagon elements */
 .hex {
-    width: 50px;
-    height: 50px;
-    background-color: #eaa001;
-    clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    rotate: 90deg;
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+    background-color: #eaa001; /* Orange background color */
+    clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%); /* Hexagon shape */
+
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+    rotate: 90deg; /* Rotate the hexagon */
 }
 
-
+/* Style for blocked hexagon */
 .hex.blocked {
-    background-color: black;
+    background-color: black; /* Black background color */
 }
 
-.hex.cat {
-    background-color: brown;
+/* Style for hexagon with bee */
+.hex.bee {
+    background-color: brown; /* Brown background color for bee */
 }
 
+/* Style for the reset button */
 #reset-button {
-    margin: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-#reset-button:hover{
-    background-color: black;
-    color:#eaa001;
-    transition-duration: .5s;
+    margin: 20px; /* Space around the button */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Hover effect for the reset button */
+#reset-button:hover {
+    background-color: black; /* Black background color */
+    color: #eaa001; /* Orange text color */
+    transition-duration: 0.5s; /* Smooth transition */
+}
+
+/* Style for bee image */
 .bee img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    /* Allows clicking through the image */
-    rotate: 270deg;
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    pointer-events: none; /* Ignore pointer events */
+    rotate: 270deg; /* Rotate the image */
 }
 
+/* Style for the game area */
 #game {
-    text-align: center;
-    /* Center align images */
-    margin-top: 20px;
-    /* Space between reset button and images */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    text-align: center; /* Center-align text */
+    margin-top: 20px; /* Space above the game area */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Wrap content */
+    gap: 20px; /* Space between items */
 }
 
-/* img {
-    height: 100px;
-    width: 100px;
-
-} */
-
-/* .TypeOfGame {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    padding: 10px;
-    background-color: rgb(254, 255, 217);
-    max-width: 600px;
-    border-radius: 5px;
-    display: block;
-}
-
-.TypeOfGame:hover {
-    background-color: rgb(142, 168, 255);
-} */
-
+/* Style for links */
 a {
-    color: black;
+    color: black; /* Black text color */
 }
 
+/* Style for name element */
 .name {
-    background-color: black;
-    padding: 10px;
-    color: white
+    background-color: black; /* Black background color */
+    padding: 10px; /* Padding inside the element */
+    color: white; /* White text color */
 }
 
+/* Style for the flex container */
 #flex {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; 
-    justify-content: center;
-    background-color:#f0f0f0;
-    padding:40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(183, 183, 183);
-
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Space between columns */
+    justify-content: center; /* Center the grid */
+    background-color: #f0f0f0; /* Light gray background color */
+    padding: 40px; /* Padding inside the container */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0 4px 8px rgb(183, 183, 183); /* Add shadow */
 }
 
+/* Style for links inside flex container */
 .link {
-    position: relative;
-    background-color: blue;
-    height: 175px;
-    width: 375px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
-    text-decoration: none;
-    color: white;
-    font-family: sans-serif;
-    font-size: 24px;
-    margin: 20px;
-    animation-name: shrink;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    position: relative; /* Relative positioning */
+    background-color: blue; /* Blue background color */
+    height: 175px; /* Set height */
+    width: 375px; /* Set width */
+    border-radius: 20px; /* Round the corners */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    border: 2px solid black; /* Black border */
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text color */
+    font-family: sans-serif; /* Set font */
+    font-size: 24px; /* Font size */
+    margin: 20px; /* Space around the link */
+    animation-name: shrink; /* Animation name */
+    animation-duration: 0.5s; /* Animation duration */
+    animation-fill-mode: forwards; /* Retain final state of animation */
 }
 
+/* Hover effect for links */
 .link:hover {
-    animation-name: grow;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    animation-name: grow; /* Animation name */
+    animation-duration: 0.5s; /* Animation duration */
+    animation-fill-mode: forwards; /* Retain final state of animation */
 }
 
+/* Animation for growing effect */
 @keyframes grow {
     from {
-        width: 375px;
-        height: 175px;
-        background-color: black;
+        width: 375px; /* Initial width */
+        height: 175px; /* Initial height */
+        background-color: black; /* Initial background color */
     }
     to {
-        width: 390px;
-        height: 190px;
-        background-color: black;
+        width: 390px; /* Final width */
+        height: 190px; /* Final height */
+        background-color: black; /* Final background color */
     }
 }
 
+/* Animation for shrinking effect */
 @keyframes shrink {
     from {
-        width: 390px;
-        height: 190px;
-        background-color: black;
+        width: 390px; /* Initial width */
+        height: 190px; /* Initial height */
+        background-color: black; /* Initial background color */
     }
     to {
-        width: 390px;
-        height: 190px;
-        background-color: black;
+        width: 375px; /* Final width */
+        height: 175px; /* Final height */
+        background-color: black; /* Final background color */
     }
 }
 
+/* Style for images inside links */
 .link img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Size of image in the button */
-    border-radius: 20px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: contain; /* Contain the image within the link */
+    border-radius: 20px; /* Round the corners */
 }
 
+/* Style for overlay text inside links */
 .link .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 30px;
-    font-family: sans-serif;
-    opacity: 0; /* Hidden to later show text */
-    transition: opacity 0.3s;
-    border-radius: 20px;
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white; /* White text color */
+    font-size: 30px; /* Font size */
+    font-family: sans-serif; /* Set font */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+    border-radius: 20px; /* Round the corners */
 }
 
+/* Hover effect for overlay text */
 .link:hover .overlay {
     opacity: 1; /* Show text on hover */
 }
 
+/* Style for the more games container */
 .more-games-container {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    margin: 20px auto;
-    width: 900px;
-    box-shadow: 0 4px 8px rgb(183, 183, 183);
-    text-align: center;
-    
-}
-.title {
-    font-family: sans-serif;
-    font-size: 35px;
-    color: black;
-    animation: titleAnimation 5s infinite;
-    margin: 50px;
+    background-color: white; /* White background color */
+    padding: 40px; /* Padding inside the container */
+    border-radius: 10px; /* Round the corners */
+    margin: 20px auto; /* Space around the container */
+    width: 900px; /* Set width */
+    box-shadow: 0 4px 8px rgb(183, 183, 183); /* Add shadow */
+    text-align: center; /* Center-align text */
 }
 
+/* Style for the title */
+.title {
+    font-family: sans-serif; /* Set font */
+    font-size: 35px; /* Font size */
+    color: black; /* Black text color */
+    animation: titleAnimation 5s infinite; /* Animation */
+    margin: 50px; /* Space around the title */
+}
+
+/* Animation for the title */
 @keyframes titleAnimation {
     0% {
-        color: black;
-        transform: translateY(-20px);
-        font-weight: bold;
+        color: black; /* Initial color */
+        transform: translateY(-20px); /* Move up */
+        font-weight: bold; /* Bold text */
     }
     50% {
-        color: black;
-        transform: translateY(-10px);
-        font-weight: bold;
+        color: black; /* Mid color */
+        transform: translateY(-10px); /* Move slightly down */
+        font-weight: bold; /* Bold text */
     }
     100% {
-        color: black;
-        transform: translateY(-20px);
-        font-weight: bold;
+        color: black; /* Final color */
+        transform: translateY(-20px); /* Move up */
+        font-weight: bold; /* Bold text */
     }
 }
